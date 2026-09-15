@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppo-pcuav"
+version = "1.0.0"
+description = "Hierarchical PPO-PID navigation for a payload-carrying UAV near overhead power lines"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "numpy>=2.2,<2.3",
+    "scipy>=1.15,<1.16",
+    "gymnasium==1.2.3",
+    "stable-baselines3==2.7.1",
+    "Pillow>=11,<13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+train = ["tensorboard>=2.18,<3"]
+
+[project.scripts]
+ppo-pcuav-demo = "ppo_pcuav.demo:main"
+ppo-pcuav-train = "ppo_pcuav.training:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ppo_pcuav = ["assets/*.zip"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

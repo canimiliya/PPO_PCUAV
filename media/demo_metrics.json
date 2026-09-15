@@ -1,0 +1,26 @@
+[
+  {
+    "method": "PPO-PID",
+    "success": true,
+    "duration_s": 18.0,
+    "path_length_m": 38.964,
+    "max_swing_deg": 16.594,
+    "swing_intensity_rad2_s": 0.2444
+  },
+  {
+    "method": "A*-PID",
+    "success": true,
+    "duration_s": 34.64,
+    "path_length_m": 39.748,
+    "max_swing_deg": 17.516,
+    "swing_intensity_rad2_s": 0.3614
+  },
+  {
+    "method": "RRT*-PID",
+    "success": true,
+    "duration_s": 38.54,
+    "path_length_m": 44.823,
+    "max_swing_deg": 20.544,
+    "swing_intensity_rad2_s": 0.5607
+  }
+]
